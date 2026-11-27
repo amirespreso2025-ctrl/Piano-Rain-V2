@@ -37,8 +37,8 @@ jobs:
 
       - name: Add Android platform
         run: npx cap add android
-        - name: Generate Android app icons
-          run: |
+      - name: Generate Android app icons
+        run: |
             mkdir -p assets
             cp piano-rain-icon.png assets/icon.png
             npx --yes @capacitor/assets generate --android        
