@@ -1,0 +1,243 @@
+// @ts-nocheck
+/* eslint-disable */
+
+export const VOICES = {
+    // Additive "grand piano": a bright hammer attack, then upper partials that die away faster than the fundamental
+    grand: {
+      att: 0.003,
+      g: 0.9,
+      p: [
+        [1, 1, 2.2, "triangle"],
+        [2, 0.5, 1.4],
+        [3, 0.26, 0.8],
+        [4, 0.14, 0.5],
+        [5, 0.07, 0.32],
+        [6, 0.04, 0.2],
+      ],
+    },
+    musicbox: {
+      att: 0.002,
+      g: 0.85,
+      p: [
+        [1, 1, 1.7],
+        [4, 0.3, 0.6],
+        [6.27, 0.14, 0.3],
+      ],
+    },
+    harp: {
+      att: 0.003,
+      g: 0.8,
+      p: [
+        [1, 1, 1.3, "triangle"],
+        [2, 0.3, 0.55],
+        [3, 0.12, 0.25],
+      ],
+    },
+    guitar: {
+      att: 0.003,
+      g: 0.8,
+      p: [
+        [1, 1, 0.75, "triangle"],
+        [2, 0.5, 0.4, "triangle"],
+        [3, 0.28, 0.22],
+        [4, 0.14, 0.12],
+      ],
+    },
+    kalimba: {
+      att: 0.002,
+      g: 0.95,
+      p: [
+        [1, 1, 1],
+        [5.4, 0.28, 0.18],
+        [9, 0.1, 0.08],
+      ],
+    },
+    marimba: {
+      att: 0.003,
+      g: 0.95,
+      p: [
+        [1, 1, 0.6],
+        [4, 0.4, 0.15],
+        [10, 0.12, 0.06],
+      ],
+    },
+    epiano: {
+      att: 0.006,
+      g: 0.85,
+      p: [
+        [1, 1, 1.5, "sine"],
+        [2, 0.32, 0.7, "sine"],
+        [7, 0.18, 0.12, "sine"],
+        [14, 0.06, 0.05, "sine"],
+      ],
+    },
+    bell: {
+      att: 0.004,
+      g: 0.8,
+      p: [
+        [1, 1, 2.4],
+        [2.76, 0.5, 1.6],
+        [5.4, 0.3, 1],
+        [8.93, 0.15, 0.6],
+      ],
+    },
+    synth: {
+      att: 0.01,
+      g: 0.5,
+      q: 3,
+      c0: 4800,
+      c1: 1e3,
+      ft: 0.4,
+      dec: 0.7,
+      o: [
+        ["sawtooth", -9, 0.5],
+        ["sawtooth", 9, 0.5],
+        ["square", 0, 0.22, -12],
+      ],
+    },
+    pluck: {
+      att: 0.003,
+      g: 0.5,
+      q: 2.5,
+      c0: 5200,
+      c1: 600,
+      ft: 0.16,
+      dec: 0.38,
+      o: [
+        ["sawtooth", -5, 0.6],
+        ["sawtooth", 5, 0.6],
+      ],
+    },
+    sqpluck: {
+      att: 0.002,
+      g: 0.38,
+      q: 1.5,
+      c0: 3600,
+      c1: 800,
+      ft: 0.12,
+      dec: 0.26,
+      o: [["square", 0, 0.8]],
+    },
+    supersaw: {
+      att: 0.006,
+      g: 0.6,
+      q: 0.8,
+      c0: 7e3,
+      c1: 2600,
+      ft: 0.5,
+      dec: 0.62,
+      o: [
+        ["sawtooth", -20, 0.3],
+        ["sawtooth", -10, 0.3],
+        ["sawtooth", 0, 0.3],
+        ["sawtooth", 10, 0.3],
+        ["sawtooth", 20, 0.3],
+      ],
+    },
+  };
+
+export const PADS = {
+    soft: { t: ["triangle", "sine"], c0: 800, c1: 0, d: 3, att: 0.9, m: 1 },
+    warm: { t: ["triangle", "sine"], c0: 1200, c1: 0, d: 3.5, att: 0.9, m: 1 },
+    analog: {
+      t: ["sawtooth", "triangle"],
+      c0: 700,
+      c1: 1500,
+      d: 9,
+      att: 0.6,
+      m: 0.55,
+    },
+    saw: { t: ["sawtooth"], c0: 900, c1: 3800, d: 12, att: 0.35, m: 0.4 },
+    glass: {
+      t: ["sine", "sine"],
+      c0: 3500,
+      c1: 0,
+      d: 6,
+      att: 1.1,
+      m: 1,
+      up: 1,
+    },
+    organ: { t: ["square", "sine"], c0: 1800, c1: 0, d: 2, att: 0.01, m: 0.45 },
+    dark: { t: ["sawtooth", "sine"], c0: 500, c1: 1100, d: 8, att: 1, m: 0.4 },
+  };
+
+export const BASSES = {
+    sine: {
+      a: "sine",
+      b: "triangle",
+      bg: 0.24,
+      c0: 480,
+      c1: 480,
+      att: 0.018,
+      dm: 1,
+      vm: 1,
+    },
+    pizz: {
+      a: "triangle",
+      b: "sine",
+      bg: 0.3,
+      c0: 900,
+      c1: 300,
+      att: 0.004,
+      dm: 0.45,
+      vm: 1.15,
+    },
+    saw: {
+      a: "sawtooth",
+      b: "square",
+      bg: 0.2,
+      c0: 900,
+      c1: 260,
+      att: 0.006,
+      dm: 0.7,
+      vm: 0.55,
+    },
+    funk: {
+      a: "square",
+      b: "sawtooth",
+      bg: 0.25,
+      c0: 1400,
+      c1: 240,
+      att: 0.004,
+      dm: 0.5,
+      vm: 0.5,
+    },
+    trance: {
+      a: "sawtooth",
+      b: "sine",
+      bg: 0.5,
+      c0: 1100,
+      c1: 200,
+      att: 0.004,
+      dm: 0.55,
+      vm: 0.5,
+    },
+    sub808: {
+      a: "sine",
+      b: "triangle",
+      bg: 0.1,
+      c0: 300,
+      c1: 300,
+      att: 0.006,
+      dm: 1.4,
+      vm: 1.5,
+      g: 1.6,
+    },
+    drone: {
+      a: "sine",
+      b: "sine",
+      bg: 0.5,
+      c0: 300,
+      c1: 300,
+      att: 0.25,
+      dm: 1,
+      vm: 1,
+    },
+  };
+
+export const KICKS = {
+    soft: { f0: 140, f1: 46, tf: 0.13, dec: 0.25, m: 1 },
+    punch: { f0: 175, f1: 44, tf: 0.09, dec: 0.3, m: 1 },
+    808: { f0: 115, f1: 36, tf: 0.22, dec: 0.62, m: 1.1 },
+    dry: { f0: 120, f1: 62, tf: 0.07, dec: 0.17, m: 1 },
+  };
